@@ -1,0 +1,119 @@
+// Font sizes (primary sizing in 'rem' units with a fallback of `px`)
+// Example usage @include font-size(20);
+@mixin font-size ($size) {
+  $rem-value: $size / 14;
+  $px-value: ($size);
+  font-size: $px-value + px; 
+  font-size: $rem-value + rem;
+}
+// Line height sizes (primary sizing in 'rem' units with a fallback of `px`)
+// Example usage @include line-height(28);
+@mixin line-height ($size) {
+  $rem-value: $size / 14;
+  $px-value: ($size);
+  line-height: $px-value + px; 
+  line-height: $rem-value + rem;
+}
+
+//clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+//grid columns
+@mixin column-offset-other($pi, $b-point, $ci){
+        .offset_#{$b-point}#{$ci}{
+            margin-left: $pi;
+         }
+}
+@mixin column-push-other($pi, $b-point, $ci){
+        .push_#{$b-point}#{$ci}{
+            left: $pi;
+         }
+}
+@mixin column-pull-other($pi, $b-point, $ci){
+        .pull_#{$b-point}#{$ci}{
+            right: $pi;
+         }
+}
+@mixin column-offset($i, $b-point, $ci){
+    $pi : percentage(1/$i);
+        .offset_#{$b-point}#{$ci}{
+            margin-left: $pi;
+         }
+}
+@mixin column-push($i, $b-point, $ci){
+    $pi : percentage(1/$i);
+        .push_#{$b-point}#{$ci}{
+            left: $pi;
+         }
+}
+@mixin column-pull($i, $b-point, $ci){
+    $pi : percentage(1/$i);
+        .pull_#{$b-point}#{$ci}{
+            right: $pi;
+         }
+}
+@mixin make-other-columns($i, $b-point, $ci){
+     
+    $pi : percentage(1-(1/$i));
+    $ci : 100 - $ci;
+    @include column-offset-other($pi, $b-point, $ci);
+        @include column-push-other($pi, $b-point, $ci);
+        @include column-pull-other($pi, $b-point, $ci);
+        .col_#{$b-point}#{$ci}{
+            position: relative;
+            min-height: 1px;
+            width: $pi;
+            float: left;
+         }
+        
+}
+
+
+
+
+@mixin make-grid-columns($b-point) {
+   @for $i from 1 through 5 {
+      $ci : round(100 / $i);
+      @if($b-point == xs){
+          @include column-offset($i, $b-point, $ci);
+          @include column-push($i, $b-point, $ci);
+          @include column-pull($i, $b-point, $ci);
+          .col_#{$b-point}#{$ci}{
+      position: relative;
+      min-height: 1px;
+      width: percentage(1/$i);
+      float: none !important;
+        }
+        @if ($i > 2){
+           @include make-other-columns($i, $b-point, $ci);
+             
+        }
+        
+      }@else{
+           @include column-offset($i, $b-point, $ci); 
+           @include column-push($i, $b-point, $ci);
+          @include column-pull($i, $b-point, $ci);
+    .col_#{$b-point}#{$ci}{
+        position: relative;
+      min-height: 1px;
+      width: percentage(1/$i);
+      float: left;
+    }
+    @if ($i > 2){
+           @include make-other-columns($i, $b-point, $ci);  
+       }
+   }
+        
+     
+  } 
+}

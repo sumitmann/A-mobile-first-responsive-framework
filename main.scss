@@ -1,0 +1,33 @@
+$version: "1.0.0";
+/*============================================
+A responsive framework for monsterindia.com
+=============================================*/
+
+//Built with latest css3 techniques and hacks.
+//Author: Sumit mann - http://www.sumitmann.com/
+/*Version: #{$version}*/
+//made in india ;)
+
+// list of different modules 
+@import "partials/_variables.scss";
+@import "partials/_mixins.scss";
+@import "partials/_reset.scss";
+@import "partials/_grid.scss";
+
+//main css starts from here do not modify anything above this
+//use variables/mixins/poperties defined above to write any custom code below this line
+
+body {
+  font-family: $df-font-family;
+  @include font-size($df-font-size);
+  @include line-height($df-line-height);
+  color: $df-font-color;
+  font-weight: $font-400;
+  background: $df-background-color;
+}
+
+.demo-grid .col{
+    background:#eee;
+    border:1px #bfbfbf solid;
+    margin-bottom: $vertical-spacing;
+}

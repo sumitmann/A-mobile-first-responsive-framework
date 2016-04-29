@@ -1,0 +1,33 @@
+// A Mobile First Responsive Grid
+//clearfix property
+.clearfix{@include clearfix;}
+//=========container and row styling similar to bootstrap==========
+
+.container{
+  padding: 0 ($col-spacing / 2);
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+.row{
+  margin-left:  ($col-spacing / -2);
+  margin-right: ($col-spacing / -2);
+  @include clearfix;
+}
+@include make-grid-columns(xs);
+@media only screen and (min-width: $s-breakpoint){
+    @include make-grid-columns(sm);
+}
+@media only screen and (min-width: $m-breakpoint){
+    @include make-grid-columns(md);
+}
+@media only screen and (min-width: $l-breakpoint){
+    @include make-grid-columns(lg);
+}
+@media only screen and (min-width: $xl-breakpoint){
+    @include make-grid-columns(xlg);
+}
+@media only screen and (min-width: $xxl-breakpoint){
+    @include make-grid-columns(xxlg);
+}
+
