@@ -6,14 +6,21 @@ $brand-color: 						#660099;
 $df-background-color: 			    #fff !default;
 $df-font-size: 					    14 !default;
 $df-line-height:					18 !default;
-$df-font-color:                     #585858 !default;
-$df-link-color:                     #cd5c5c !default;
+$df-font-weight:                    400 !default;
+
+//colors
+$primary-color:                     #585858 !default;
+$secondary-color:                   #454545 !default;
+$color-white:                       #ffffff;
+$link-color:                        #26b18a !default;
+$link-color-dark:                   #02946b !default;
+$alert-color:                       #c60f13 !default;
+$success-color:                     #5da423 !default;
 
 // Font Weight definition
 $font-100: 							100 !default;
 $font-200: 							200 !default;
 $font-300: 							300 !default;
-$font-400: 							400 !default;
 $font-500: 							500 !default;
 $font-600: 							600 !default;
 $font-700: 							700 !default;
@@ -32,8 +39,8 @@ $vertical-spacing: 20px;
 $max-width: 1366px;
 $col-spacing: 30px;
 $vertical-spacing: 20px;
-$xxl-breakpoint: 1920px;  //larger device or TV sets
-$xl-breakpoint: 1440px; //higher resolution monitors and above
-$l-breakpoint: 1024px; //desktop browsers and above
-$m-breakpoint: 768px;  //iPad-sized tablets and above
-$s-breakpoint: 640px; //small and larger tablets
+$xxlg-breakpoint: 1920px;  //larger device or TV sets
+$xlg-breakpoint: 1440px; //higher resolution monitors and above
+$lg-breakpoint: 1024px; //desktop browsers and above
+$md-breakpoint: 768px;  //iPad-sized tablets and above
+$sm-breakpoint: 640px; //small and larger tablets

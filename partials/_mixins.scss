@@ -15,6 +15,21 @@
   line-height: $rem-value + rem;
 }
 
+// Example usage @include paddings(padding, 50);
+@mixin paddings ($size) {
+  $rem-value: $size / 14;
+  $px-value: ($size);
+  padding: $px-value + px; 
+  padding: $rem-value + rem;
+}
+@mixin margins ($margin, $size) {
+  $rem-value: $size / 14;
+  $px-value: ($size);
+  $margin: $px-value + px; 
+  $margin: $rem-value + rem;
+}
+
+
 //clearfix
 @mixin clearfix() {
   &:before,
@@ -78,9 +93,6 @@
         
 }
 
-
-
-
 @mixin make-grid-columns($b-point) {
    @for $i from 1 through 5 {
       $ci : round(100 / $i);
@@ -92,14 +104,12 @@
       position: relative;
       min-height: 1px;
       width: percentage(1/$i);
-      float: none !important;
+      float: none;
         }
         @if ($i > 2){
            @include make-other-columns($i, $b-point, $ci);
-             
         }
-        
-      }@else{
+       }@else{
            @include column-offset($i, $b-point, $ci); 
            @include column-push($i, $b-point, $ci);
           @include column-pull($i, $b-point, $ci);
@@ -113,7 +123,5 @@
            @include make-other-columns($i, $b-point, $ci);  
        }
    }
-        
-     
   } 
 }

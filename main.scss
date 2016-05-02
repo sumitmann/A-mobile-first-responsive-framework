@@ -12,20 +12,17 @@ A responsive framework for monsterindia.com
 @import "partials/_variables.scss";
 @import "partials/_mixins.scss";
 @import "partials/_reset.scss";
+@import "partials/_base.scss";
 @import "partials/_grid.scss";
+@import "partials/_button.scss";
 
-//main css starts from here do not modify anything above this
+
+//demo css starts from here do not modify anything above this
 //use variables/mixins/poperties defined above to write any custom code below this line
 
-body {
-  font-family: $df-font-family;
-  @include font-size($df-font-size);
-  @include line-height($df-line-height);
-  color: $df-font-color;
-  font-weight: $font-400;
-  background: $df-background-color;
-}
 
+
+/*for demo only*/
 .demo-grid .col{
     background:#eee;
     border:1px #bfbfbf solid;

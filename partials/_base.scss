@@ -1,0 +1,31 @@
+//clearfix property
+.clearfix{@include clearfix;}
+
+body {
+  font-family: $df-font-family;
+  @include font-size($df-font-size);
+  @include line-height($df-line-height);
+  color: $primary-color;
+  font-weight: $df-font-weight;
+  background: $df-background-color;
+}
+
+// anchor tag  style
+a{
+ :link { color: $link-color;}
+ :visited { color: $secondary-color; }
+ :hover,:active{ color: $link-color-dark; }
+}
+// headers
+h1,h2,h3,h4,h5,h6 {
+    font-weight: $df-font-weight;
+    color: $primary-color;
+	@include margins(margin-top, 50);
+    @include margins(margin-bottom, 50);
+}
+h1{@include font-size(32);@include line-height(32);}
+h2{@include font-size(24);@include line-height(24);}
+h3{@include font-size(20);@include line-height(20);}
+h4{@include font-size(18);@include line-height(18);}
+h4{@include font-size(16);@include line-height(16);}
+h4{@include font-size(14);@include line-height(14);}
