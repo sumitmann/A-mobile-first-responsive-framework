@@ -24,12 +24,6 @@ body, form, fieldset, legend, input, select, textarea, button {
 img {
   border: 0; }
 
-.clearfix:before, .clearfix:after {
-  content: "";
-  display: table; }
-.clearfix:after {
-  clear: both; }
-
 body {
   font-family: Arial, sans-serif;
   font-size: 14px;
@@ -87,6 +81,67 @@ h4 {
   line-height: 14px;
   line-height: 1rem; }
 
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+.clearfix:after {
+  clear: both; }
+
+/* text floats */
+.text_left_xs {
+  text-align: left !important; }
+
+.text-right_xs {
+  text-align: right !important; }
+
+.text-center_xs {
+  text-align: center !important; }
+
+@media only screen and (min-width: 640px) {
+  .text_left_sm {
+    text-align: left !important; }
+
+  .text-right_sm {
+    text-align: right !important; }
+
+  .text-center_sm {
+    text-align: center !important; } }
+@media only screen and (min-width: 768px) {
+  .text_left_md {
+    text-align: left !important; }
+
+  .text-right_md {
+    text-align: right !important; }
+
+  .text-center_md {
+    text-align: center !important; } }
+@media only screen and (min-width: 1024px) {
+  .text_left_lg {
+    text-align: left !important; }
+
+  .text-right_lg {
+    text-align: right !important; }
+
+  .text-center_lg {
+    text-align: center !important; } }
+@media only screen and (min-width: 1440px) {
+  .text_left_xlg {
+    text-align: left !important; }
+
+  .text-right_xlg {
+    text-align: right !important; }
+
+  .text-center_xlg {
+    text-align: center !important; } }
+@media only screen and (min-width: 1920px) {
+  .text_left_xxlg {
+    text-align: left !important; }
+
+  .text-right_xxlg {
+    text-align: right !important; }
+
+  .text-center_xxlg {
+    text-align: center !important; } }
 .container {
   padding: 0 15px;
   margin: 0 auto;

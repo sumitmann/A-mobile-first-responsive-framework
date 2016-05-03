@@ -42,6 +42,17 @@
   }
 }
 
+//text-align
+@mixin text-align($text-align){
+.text_left_#{$text-align} {
+    text-align: left !important; }
+
+  .text-right_#{$text-align} {
+    text-align: right !important; }
+
+  .text-center_#{$text-align} {
+    text-align: center !important; }
+}
 
 //grid columns
 @mixin column-offset-other($pi, $b-point, $ci){
