@@ -28,6 +28,8 @@ h4{@include font-size(16);@include line-height(16);}
 h4{@include font-size(14);@include line-height(14);}
 
 //clearfix property
+.float-left{float:left;}
+.float-right{float:right;}
 .clearfix{@include clearfix;}
 
 // text alignment
@@ -70,3 +72,20 @@ dt,dd,li {
   @include margins(margin-bottom, 10);
 }
 
+//tables
+table {
+  @include font-size(15);
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  @include margins(margin-top, 15);
+   @include margins(margin-bottom, 15);
+  text-align: left;
+  thead,tbody,tfoot{
+    td,th {
+      color: $secondary-color;
+      @include paddings(padding, 10);
+      border-bottom: 1px solid $primary-color;
+    }
+  }
+}
