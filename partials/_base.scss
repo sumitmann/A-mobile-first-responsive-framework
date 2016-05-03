@@ -29,7 +29,8 @@ h4{@include font-size(14);@include line-height(14);}
 
 //clearfix property
 .clearfix{@include clearfix;}
-/* text floats */
+
+// text alignment
 @include text-align(xs);
 @media only screen and (min-width: $sm-breakpoint){
     @include text-align(sm);
@@ -46,3 +47,26 @@ h4{@include font-size(14);@include line-height(14);}
 @media only screen and (min-width: $xxlg-breakpoint){
    @include text-align(xxlg);
 }
+
+//lists
+dl,ol,ul {
+  margin-top: 0;
+  padding-left: 0;
+  dl, ul, ol {
+    @include margins(margin, 15);
+    margin-right:0;
+  }
+}
+dl {
+  list-style: none;
+}
+ul {
+  list-style: circle inside;
+}
+ol {
+  list-style: decimal inside;
+}
+dt,dd,li {
+  @include margins(margin-bottom, 10);
+}
+

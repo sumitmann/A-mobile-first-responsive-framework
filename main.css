@@ -87,7 +87,6 @@ h4 {
 .clearfix:after {
   clear: both; }
 
-/* text floats */
 .text_left_xs {
   text-align: left !important; }
 
@@ -142,6 +141,21 @@ h4 {
 
   .text-center_xxlg {
     text-align: center !important; } }
+dl, ol, ul {
+  margin-top: 0;
+  padding-left: 0; }
+  dl dl, dl ul, dl ol, ol dl, ol ul, ol ol, ul dl, ul ul, ul ol {
+    margin-right: 0; }
+
+dl {
+  list-style: none; }
+
+ul {
+  list-style: circle inside; }
+
+ol {
+  list-style: decimal inside; }
+
 .container {
   padding: 0 15px;
   margin: 0 auto;
